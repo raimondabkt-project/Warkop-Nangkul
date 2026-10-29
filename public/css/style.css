@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300&display=swap");
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif, "Londrina Solid", "Forte";
+}
+
+.fContainer {
+    display: flex;
+    width: 100%;
+    background-color: #fff6ea;
+}
+
+.wrepper {
+    background-color: #3F2E3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+    background-color: #3F2E3E;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navigation>li {
+    padding: 12px;
+}
+
+.navigation>li>a>img {
+    width: 30px;
+    height: 30px;
+    padding: 0.1px;
+}
+
+.navigation>li>a>img:hover {
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+/* .navigation > li > a > img:active {
+  box-shadow: none;
+  transform: translateY(0);
+} */
+
+.navigation>li>a {
+    color: black;
+    font-family: "londrina solid";
+    text-decoration: none;
+
+}
+
+.navigation>li>input {
+    border-radius: 8px;
+    width: 700px;
+    height: 30px;
+}
+
+.active {
+    background-color: white;
+    border-radius: 8px;
+    width: 50px;
+    height: 25px;
+}
+
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 10px;
+    font-weight: 600px;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+.username {
+    color: white;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Roboto", sans-serif, "Londrina Solid", "Forte";
+    font-size: medium;
+}
+
+/*Drop down*/
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+ 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* styling of whole input container */
+.form {
+    --timing: 0.3s;
+    --width-of-input: 600px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+}
+
+/* styling of Input */
+.input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+}
+
+/* styling of animated border */
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* sizing svg icons */
+.form svg {
+    width: 17px;
+    margin-top: 3px;
+}
+
+.list {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.list .item {
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 10px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.list .item img {
+    width: 165px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.list .item .title {
+    font-weight: 600;
+}
+
+.list .item .price {
+    margin: 10px;
+}
+
+.list .item button {
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+.list2 {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.list2 .item {
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 10px;
+    box-shadow: 0 0px 50px #757676;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.list2 .item img {
+    width: 165px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.list2 .item .title {
+    font-weight: 600;
+}
+
+.list2 .item .price {
+    margin: 10px;
+}
+
+.list2 .item button {
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+footer {
+    background-color: #3F2E3E;
+    height: 45px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif, "Londrina Solid", "Forte";
+}

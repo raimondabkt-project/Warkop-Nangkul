@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LOGIN</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: auto 200px;
+      margin-top: 100px;
+    }
+
+    form {
+      border: 3px solid #f1f1f1;
+    }
+
+    h5>a {
+      text-decoration: none;
+      color: #4d4dff;
+    }
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3F2E3E;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    label {
+      display: block;
+    }
+
+    .container {
+      padding: 16px;
+      display: block;
+    }
+
+    span.psw {
+      margin-left: 68%;
+      padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Login Form</h2>
+  <h5>Don't have an account?<a href="/register"> Create one</a></h5>
+
+  <form action="/login" method="post" name ="login">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+      <% if (message) { %>
+        <div class="field">
+            <span class="tag is-link is-danger">
+                <%= message %>
+            </span>
+        </div>
+        <% } %>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success">
+                        Login
+                    </button>
+                    <a href="/" class="button">Home</a>
+                </p>
+            </div>  
+
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+
+  <!-- <script>
+    btn.onclick = function() {
+      const email = document.getElementById("email").value()
+      const pass = document.getElementById("password").value()
+      console.log(email)
+      console.log(pass)
+    }
+  </script> -->
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-
+web/css/all.min.css">
+    <link rel="stylesheet" href="https://www.unpkg.com/bulma@0.9.3/css/bulma.css">
+</head>
+
+<body>
+    <div id="app" class="container is-max-desktop mt-5">
+        <h1 class="title">Login Form</h1>
+        <form action="/login" method="post" name="login">
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Email" name="username">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password" name="password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+            
+        </form>
+    </div>
+</body>
+
+</html> -->
